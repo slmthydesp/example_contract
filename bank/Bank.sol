@@ -1,15 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Bank {
+import "./IBank.sol";
+
+contract Bank is IBank {
     address public admin;
     mapping(address => uint256) public balances;
 
     // 记录存款金额前 3 名的地址（降序排列）
     address[3] public topDepositors;
-
-    event Deposit(address indexed from, uint256 amount);
-    event WithdrawAll(address indexed admin, uint256 amount);
 
     modifier onlyAdmin() {
         require(msg.sender == admin, "Only admin can call this");
@@ -21,17 +20,17 @@ contract Bank {
     }
 
     // 通过 Metamask 直接向合约转账 ETH 时触发
-    receive() external payable {
+    receive() external payable virtual {
         _deposit();
     }
 
     // 主动调用 deposit 函数存款
-    function deposit() external payable {
+    function deposit() external payable virtual {
         _deposit();
     }
 
     // 内部存款逻辑
-    function _deposit() private {
+    function _deposit() internal {
         require(msg.value > 0, "Must send ETH");
         balances[msg.sender] += msg.value;
         _updateTop3(msg.sender);
