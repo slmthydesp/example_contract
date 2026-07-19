@@ -1,0 +1,43 @@
+{
+  "name": "Hypurr",
+  "description": "from OpenSea https://opensea.io/item/hyperevm/0x9125e2d6827a00b0f8330d6ef7bef07730bac685/2577",
+  "image": "ipfs://QmPqSmeWCUcqRTeoBoYmYayDjhgPGyEJddkga7kak72yg2",
+  "attributes": [
+    {
+      "trait_type": "ACCESSORIES",
+      "value": "None"
+    },
+    {
+      "trait_type": "BACKGROUND",
+      "value": "Solid Slate Blue"
+    },
+    {
+      "trait_type": "BIG ACCESSORIES",
+      "value": "Snowboard Gray Purr"
+    },
+    {
+      "trait_type": "BODY",
+      "value": "Purr"
+    },
+    {
+      "trait_type": "CLOTHING",
+      "value": "Baseball Tee Blob Pink"
+    },
+    {
+      "trait_type": "EYES",
+      "value": "Snow Goggles Purple"
+    },
+    {
+      "trait_type": "HEAD",
+      "value": "Maine Coon Purr"
+    },
+    {
+      "trait_type": "MOUTH",
+      "value": "Silly"
+    },
+    {
+      "trait_type": "TAIL",
+      "value": "Tail Purr Stripe"
+    }
+  ]
+}
